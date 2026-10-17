@@ -1,0 +1,18 @@
+{
+	"name": "aleis",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"lint": "biome check --write",
+		"format": "biome format --write",
+		"typecheck": "bun check"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.15",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^7"
+	}
+}
