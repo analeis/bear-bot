@@ -1,1 +1,38 @@
+# dependencies
 node_modules/
+
+# local database (the default DATABASE_PATH lives here)
+data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# build output
+dist/
+coverage/
+*.tsbuildinfo
+
+# nix
+result
+result-*
+.nix-result
+
+# editors and os
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

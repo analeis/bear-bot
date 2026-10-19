@@ -1,0 +1,22 @@
+services:
+  bear-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bear-bot:latest
+    restart: unless-stopped
+    # Run the bot as PID 1 so SIGTERM reaches it and the database closes.
+    init: true
+    stop_grace_period: 15s
+    security_opt:
+      - no-new-privileges:true
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_PATH: /app/data/bear-bot.db
+    volumes:
+      - bear-bot-data:/app/data
+
+volumes:
+  bear-bot-data:

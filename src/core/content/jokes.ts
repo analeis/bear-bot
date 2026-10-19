@@ -1,0 +1,53 @@
+/** Bear jokes for the `/joke` command. */
+
+export const BEAR_JOKES: readonly string[] = [
+	"Why don't bears ever read books? Because they already know the ending, it's a grizzly ending.",
+	"What do you call a bear with no claws? A gummy bear.",
+	"What do you call a bear with no hair? A bald bear. A very embarrassing bear.",
+	"Why was the polar bear upset? Because he had a bout of de-lion.",
+	"What's a bear's favourite part of a honeycomb? The bears and the bees.",
+	"How do you tell a bear from a dog? The dog will beg, the bear will steal your food.",
+	"What do you call a bear that never sleeps? A grizzly.",
+	"Why did the bear cross the road? To get to the other side of the honey pot.",
+	"What do you call a bear surrounded by bees? A buzzy bear.",
+	"Why do bears wash themselves? Because they are bear-clean.",
+	"What did the bear say to the honey? 'I bee-lieve in you.'",
+	"How do you keep a bear from stealing your food? Hide it in a bear-mint container.",
+	"What do you call a bear that eats, sleeps and does nothing else? A bear minimum.",
+	"Why do polar bears have long necks? To look over the ice.",
+	"What do you call a bear in a restaurant? A bear customer.",
+	"How do you make a bear smile? Give it a bear-y nice joke.",
+	"Why don't bears like hot tubs? Too many boiling bears.",
+	"What did the koala say after a long day? 'Koala-fied I'm done.'",
+	"What do you call a bear that plays the drums? A metronome bear. Hmm, or a bear-drummer.",
+	"Why did the bear get a job? It needed to bear-ly survive.",
+	"What's a bear's favourite kind of music? Hairy-ary music.",
+	"Why is a bear so calm? Because it has bear-ly no worries.",
+	"What do you call a bear that never tells a lie? A polar bear. The rest are brown bears.",
+	"How do you cheer up a sad bear? Bear hugs.",
+	"Why did the bear invite the fox over? It wanted to settle a dispute about who was the honey-est.",
+	"What do you call a bear in a boxing ring? A heavyweight honey champion.",
+	"How does a bear say hello? 'Bear-roo'.",
+	"Why did the bear break up with the beehive? It was too controlling.",
+	"What's a bear's favourite game? Honey I Shrunk the Kids.",
+	"Why do bears hate rollercoasters? Too many sharp turns and no honey stops.",
+	"What did the bear say when it got a stomach ache? I need a bear-d.",
+	"How do you tell if a bear is a good dancer? It has bear-y good moves.",
+	"What do you call a bear that gives out honey? A honey dealer.",
+	"Why did the bear bring a ladder to the honey? It heard the stakes were high.",
+	"What do you call a bear in the kitchen? A chef bear-ito.",
+	"Why are bears so calm at the dentist? They're used to bear-aches.",
+	"What do you get when you cross a bear with a fish? A bear-ificial selection of salmon.",
+	"Why did the bear go to the cinema? It wanted to see the bear-afts.",
+	"What do you call a bear that can't stop eating? A bear-vourite.",
+	"How do you make a bear laugh? Tell it a joke about a honey badger, then watch it roar.",
+	"What's a bear's favourite maths? Honey numbers, because they are sweet.",
+	"Why did the bear join a band? It had great bear-y-tempo.",
+	"What do you call a bear that is great at hide and seek? Camo-bear.",
+	"Why do bears love fishing? Because they are patient anglers with a bear of patience.",
+];
+
+export function randomJoke(rng: () => number = Math.random): string {
+	const index = Math.floor(rng() * BEAR_JOKES.length) % BEAR_JOKES.length;
+	return BEAR_JOKES[index] as string;
+}
