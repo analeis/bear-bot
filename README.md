@@ -156,6 +156,7 @@ is what CI uses.
 ### Continuous integration
 
 `.github/workflows/ci.yml` runs on every push and pull request:
+
 - **check** — `bun install --frozen-lockfile`, typecheck, `biome ci` and the
   unit tests.
 - **docker** — builds the image, so a broken `Dockerfile` fails the build
